@@ -2009,3 +2009,13 @@ form button:hover {
     font-size: 14px; /* Fuente más pequeña */
   }
 }
+
+/* Estilo para el contenedor del administrador (para centrado) */
+#admin-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrado vertical */
+  align-items: center; /* Centrado horizontal */
+  min-height: 100vh; /* Ocupa toda la altura */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+}
