@@ -1853,13 +1853,12 @@ form button:hover {
     padding: 10px;
   }
 }
-
 /* Estilo para el contenedor del formulario de inicio de sesión */
 #login-section {
-  max-width: 900px; /* Ancho grande para computadoras */
+  max-width: 1100px; /* Más ancho para computadoras */
   width: 98%; /* Ocupa casi todo el ancho en móviles */
   margin: 0 auto; /* Centrado horizontal */
-  padding: 30px; /* Espaciado interno */
+  padding: 35px; /* Espaciado interno */
   background-color: #ffffff; /* Fondo blanco */
   border-radius: 15px; /* Bordes redondeados */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
@@ -1881,14 +1880,14 @@ form button:hover {
   flex-direction: column;
   gap: 20px; /* Espacio entre elementos */
   width: 100%; /* Ocupa todo el ancho del contenedor */
-  max-width: 800px; /* Limita el ancho del formulario en computadoras */
+  max-width: 1000px; /* Formulario más ancho en computadoras */
 }
 
 /* Estilo de los campos de entrada */
 #login-form input[type="email"],
 #login-form input[type="password"] {
-  padding: 16px; /* Espaciado interno más grande */
-  font-size: 18px; /* Fuente más grande para legibilidad */
+  padding: 18px; /* Espaciado interno más grande */
+  font-size: 19px; /* Fuente más grande para legibilidad */
   border: 1px solid #cfd8dc; /* Borde gris claro */
   border-radius: 10px; /* Bordes redondeados */
   outline: none; /* Sin borde de foco por defecto */
@@ -1907,13 +1906,13 @@ form button:hover {
 
 /* Estilo del botón de inicio de sesión */
 #login-form button {
-  padding: 16px; /* Espaciado interno más grande */
+  padding: 18px; /* Espaciado interno más grande */
   background-color: #3f51b5; /* Azul oscuro */
   color: #ffffff; /* Texto blanco */
   border: none; /* Sin borde */
   border-radius: 12px; /* Bordes redondeados */
   cursor: pointer; /* Cursor de pointer */
-  font-size: 18px; /* Fuente más grande */
+  font-size: 19px; /* Fuente más grande */
   font-weight: 600; /* Texto en negrita */
   text-transform: uppercase; /* Texto en mayúsculas */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones */
@@ -1937,23 +1936,23 @@ form button:hover {
 /* Media query para computadoras (pantallas mayores a 768px) */
 @media (min-width: 769px) {
   #login-section {
-    max-width: 900px; /* Ancho grande para computadoras */
+    max-width: 1100px; /* Ancho más grande para computadoras */
     padding: 40px; /* Más espaciado */
   }
 
   #login-form {
-    max-width: 800px; /* Formulario más ancho */
+    max-width: 1000px; /* Formulario más ancho */
   }
 
   #login-form input[type="email"],
   #login-form input[type="password"] {
-    padding: 18px; /* Inputs más grandes */
-    font-size: 19px; /* Fuente más grande */
+    padding: 20px; /* Inputs aún más grandes */
+    font-size: 20px; /* Fuente más grande */
   }
 
   #login-form button {
-    padding: 18px; /* Botón más grande */
-    font-size: 19px; /* Fuente más grande */
+    padding: 20px; /* Botón más grande */
+    font-size: 20px; /* Fuente más grande */
   }
 }
 
