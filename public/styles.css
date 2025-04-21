@@ -1856,41 +1856,41 @@ form button:hover {
 
 /* Estilo para el contenedor del formulario de inicio de sesión */
 #login-section {
-  max-width: 800px; /* Más ancho para computadoras */
-  width: 95%; /* Ocupa casi todo el ancho en cualquier dispositivo */
-  margin: 30px auto; /* Centrado horizontal con menos espacio vertical */
-  padding: 20px; /* Espaciado interno reducido para un diseño más ajustado */
+  max-width: 900px; /* Ancho grande para computadoras */
+  width: 98%; /* Ocupa casi todo el ancho en móviles */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 30px; /* Espaciado interno */
   background-color: #ffffff; /* Fondo blanco */
-  border-radius: 12px; /* Bordes redondeados */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
   transition: all 0.3s ease; /* Transición suave para hover */
-  display: flex; /* Para centrar el contenido */
+  display: flex; /* Para centrar el contenido interno */
   flex-direction: column; /* Alineación vertical */
   align-items: center; /* Centrado horizontal del contenido */
 }
 
 /* Efecto hover para el contenedor */
 #login-section:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
-  transform: translateY(-3px); /* Elevación ligera */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+  transform: translateY(-5px); /* Elevación ligera */
 }
 
 /* Estilo del formulario de login */
 #login-form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Espacio reducido entre elementos */
-  width: 100%; /* Asegura que el formulario ocupe todo el ancho del contenedor */
-  max-width: 700px; /* Limita el ancho del formulario en computadoras */
+  gap: 20px; /* Espacio entre elementos */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 800px; /* Limita el ancho del formulario en computadoras */
 }
 
 /* Estilo de los campos de entrada */
 #login-form input[type="email"],
 #login-form input[type="password"] {
-  padding: 12px; /* Espaciado interno ajustado */
-  font-size: 16px; /* Tamaño de fuente legible */
+  padding: 16px; /* Espaciado interno más grande */
+  font-size: 18px; /* Fuente más grande para legibilidad */
   border: 1px solid #cfd8dc; /* Borde gris claro */
-  border-radius: 8px; /* Bordes redondeados más sutiles */
+  border-radius: 10px; /* Bordes redondeados */
   outline: none; /* Sin borde de foco por defecto */
   background-color: #f3f6f9; /* Fondo claro */
   transition: border 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
@@ -1902,18 +1902,18 @@ form button:hover {
 #login-form input[type="email"]:focus,
 #login-form input[type="password"]:focus {
   border-color: #3f51b5; /* Borde azul al enfocar */
-  box-shadow: 0 0 6px rgba(63, 81, 181, 0.5); /* Sombra azul suave */
+  box-shadow: 0 0 8px rgba(63, 81, 181, 0.5); /* Sombra azul suave */
 }
 
 /* Estilo del botón de inicio de sesión */
 #login-form button {
-  padding: 12px; /* Espaciado interno reducido */
+  padding: 16px; /* Espaciado interno más grande */
   background-color: #3f51b5; /* Azul oscuro */
   color: #ffffff; /* Texto blanco */
   border: none; /* Sin borde */
-  border-radius: 10px; /* Bordes redondeados */
+  border-radius: 12px; /* Bordes redondeados */
   cursor: pointer; /* Cursor de pointer */
-  font-size: 16px; /* Tamaño de fuente */
+  font-size: 18px; /* Fuente más grande */
   font-weight: 600; /* Texto en negrita */
   text-transform: uppercase; /* Texto en mayúsculas */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones */
@@ -1923,61 +1923,60 @@ form button:hover {
 /* Efecto hover para el botón */
 #login-form button:hover {
   background-color: #ff7043; /* Naranja al pasar el ratón */
-  transform: translateY(-2px); /* Elevación más sutil */
+  transform: translateY(-3px); /* Elevación ligera */
 }
 
 /* Mensaje de error */
 #error-message {
   text-align: center; /* Centrado */
-  font-size: 13px; /* Tamaño de fuente más pequeño */
-  margin-top: 8px; /* Espacio superior reducido */
+  font-size: 14px; /* Tamaño de fuente adecuado */
+  margin-top: 10px; /* Espacio superior */
   color: red; /* Color rojo para el error */
 }
 
 /* Media query para computadoras (pantallas mayores a 768px) */
 @media (min-width: 769px) {
   #login-section {
-    max-width: 800px; /* Ancho mayor para computadoras */
-    padding: 25px; /* Ligeramente más espaciado */
+    max-width: 900px; /* Ancho grande para computadoras */
+    padding: 40px; /* Más espaciado */
   }
 
   #login-form {
-    max-width: 700px; /* Formulario más ancho */
+    max-width: 800px; /* Formulario más ancho */
   }
 
   #login-form input[type="email"],
   #login-form input[type="password"] {
-    padding: 14px; /* Inputs más grandes */
-    font-size: 17px; /* Fuente más grande */
+    padding: 18px; /* Inputs más grandes */
+    font-size: 19px; /* Fuente más grande */
   }
 
   #login-form button {
-    padding: 14px; /* Botón más grande */
-    font-size: 17px; /* Fuente más grande */
+    padding: 18px; /* Botón más grande */
+    font-size: 19px; /* Fuente más grande */
   }
 }
 
 /* Media query para móviles (pantallas de 768px o menos) */
 @media (max-width: 768px) {
   #login-section {
-    max-width: 98%; /* Ocupa casi todo el ancho disponible */
-    padding: 15px; /* Menos espacio interno */
-    margin: 15px auto; /* Menos margen vertical */
+    max-width: 98%; /* Ocupa casi todo el ancho */
+    padding: 20px; /* Menos espaciado */
   }
 
   #login-form {
-    max-width: 100%; /* El formulario usa todo el ancho disponible */
+    max-width: 100%; /* Formulario usa todo el ancho disponible */
   }
 
   #login-form input[type="email"],
   #login-form input[type="password"] {
-    padding: 10px; /* Inputs más compactos */
-    font-size: 15px; /* Fuente más pequeña */
+    padding: 14px; /* Inputs más compactos */
+    font-size: 16px; /* Fuente más pequeña */
   }
 
   #login-form button {
-    padding: 10px; /* Botón más compacto */
-    font-size: 15px; /* Fuente más pequeña */
+    padding: 14px; /* Botón más compacto */
+    font-size: 16px; /* Fuente más pequeña */
   }
 }
 
@@ -1985,17 +1984,17 @@ form button:hover {
 @media (max-width: 480px) {
   #login-section {
     max-width: 100%; /* Máximo ancho */
-    padding: 12px; /* Aún más compacto */
+    padding: 15px; /* Más compacto */
   }
 
   #login-form input[type="email"],
   #login-form input[type="password"] {
-    padding: 8px; /* Inputs más pequeños */
-    font-size: 14px; /* Fuente más pequeña */
+    padding: 12px; /* Inputs más pequeños */
+    font-size: 15px; /* Fuente más pequeña */
   }
 
   #login-form button {
-    padding: 8px; /* Botón más pequeño */
-    font-size: 14px; /* Fuente más pequeña */
+    padding: 12px; /* Botón más pequeño */
+    font-size: 15px; /* Fuente más pequeña */
   }
 }
