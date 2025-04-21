@@ -1855,10 +1855,20 @@ form button:hover {
     padding: 10px;
   }
 }
+/* Estilo para el contenedor del administrador (fondo azul oscuro) */
+#admin-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrado vertical */
+  align-items: center; /* Centrado horizontal */
+  min-height: 100vh; /* Ocupa toda la altura */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  background-color: #1a237e; /* Azul oscuro para administrador */
+}
 
 /* Estilo para el título dentro de #login-section */
 #login-section h3 {
-  color: #ffffff; /* Blanco para contrastar con el fondo azul oscuro */
+  color: #1a237e; /* Azul oscuro para combinar con el tema */
   font-size: 24px; /* Tamaño adecuado */
   margin-bottom: 20px; /* Espacio inferior */
   text-align: center; /* Centrado */
@@ -1871,7 +1881,7 @@ form button:hover {
   width: 98%; /* Ocupa casi todo el ancho en móviles */
   margin: 0 auto; /* Centrado horizontal */
   padding: 20px; /* Espaciado interno reducido */
-  background-color: #1a237e; /* Azul oscuro para administrador */
+  background-color: #ffffff; /* Fondo blanco para contraste */
   border-radius: 12px; /* Bordes redondeados */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
   transition: all 0.3s ease; /* Transición suave para hover */
@@ -1880,7 +1890,7 @@ form button:hover {
   align-items: center; /* Centrado horizontal del contenido */
 }
 
-/* Efecto hover para el contenedor */
+/* Efertgo hover para el contenedor */
 #login-section:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
   transform: translateY(-3px); /* Elevación ligera */
@@ -1903,7 +1913,7 @@ form button:hover {
   border: 1px solid #cfd8dc; /* Borde gris claro */
   border-radius: 8px; /* Bordes redondeados */
   outline: none; /* Sin borde de foco por defecto */
-  background-color: #f3f6f9; /* Fondo claro para contraste */
+  background-color: #f3f6f9; /* Fondo claro */
   transition: border 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
   width: 100%; /* Ocupa todo el ancho disponible */
   box-sizing: border-box; /* Evita desbordamientos */
@@ -1919,7 +1929,7 @@ form button:hover {
 /* Estilo del botón de inicio de sesión */
 #login-form button {
   padding: 12px; /* Espaciado interno moderado */
-  background-color: #3f51b5; /* Azul oscuro que combina con el fondo */
+  background-color: #3f51b5; /* Azul oscuro */
   color: #ffffff; /* Texto blanco */
   border: none; /* Sin borde */
   border-radius: 10px; /* Bordes redondeados */
@@ -1933,7 +1943,7 @@ form button:hover {
 
 /* Efecto hover para el botón */
 #login-form button:hover {
-  background-color: #ff7043; /* Naranja para destacar en hover */
+  background-color: #ff7043; /* Naranja para destacar */
   transform: translateY(-2px); /* Elevación sutil */
 }
 
@@ -1942,7 +1952,7 @@ form button:hover {
   text-align: center; /* Centrado */
   font-size: 13px; /* Tamaño de fuente pequeño */
   margin-top: 8px; /* Espacio superior reducido */
-  color: #ff4d4d; /* Rojo claro para visibilidad contra fondo oscuro */
+  color: #ff4d4d; /* Rojo para visibilidad */
 }
 
 /* Media query para computadoras (pantallas mayores a 768px) */
@@ -2008,14 +2018,4 @@ form button:hover {
     padding: 8px; /* Botón más pequeño */
     font-size: 14px; /* Fuente más pequeña */
   }
-}
-
-/* Estilo para el contenedor del administrador (para centrado) */
-#admin-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centrado vertical */
-  align-items: center; /* Centrado horizontal */
-  min-height: 100vh; /* Ocupa toda la altura */
-  width: 100%; /* Asegura que ocupe todo el ancho */
 }
