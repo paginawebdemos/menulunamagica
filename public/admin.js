@@ -1,14 +1,19 @@
-// 🔄 CAMBIA ESTA URL si tu dominio en Render es diferente
+// 🟢 URL de tu backend
 const API_URL = "https://lunamagica.onrender.com";
 
-// 🔐 Login del admin
+// 🔐 Login seguro con backend
 document.getElementById("login-form").addEventListener("submit", async function (e) {
   e.preventDefault();
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  // Login simulado (puedes hacer real más adelante)
-  if (email === "admin@luna.com" && password === "1234") {
+  const res = await fetch(`${API_URL}/api/login`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password }),
+  });
+
+  if (res.ok) {
     document.getElementById("login-section").style.display = "none";
     document.getElementById("admin-content").style.display = "block";
     loadMenu();
@@ -22,7 +27,7 @@ document.getElementById("logout-btn").addEventListener("click", () => {
   location.reload();
 });
 
-// 📦 Cargar platos del menú
+// 📦 Cargar menú
 async function loadMenu() {
   const res = await fetch(`${API_URL}/api/menu`);
   const data = await res.json();
@@ -45,30 +50,65 @@ async function loadMenu() {
   });
 }
 
-// ❌ Eliminar plato
+// ❌ Eliminar
 window.deleteDish = async function (id) {
-  await fetch(`${API_URL}/api/menu/${id}`, {
-    method: "DELETE",
-  });
+  await fetch(`${API_URL}/api/menu/${id}`, { method: "DELETE" });
   loadMenu();
 };
 
-// ➕ Agregar nuevo plato
-document.getElementById("add-dish-form").addEventListener("submit", async function (e) {
-  e.preventDefault();
-
+// ☁️ Subir imagen a Cloudinary
+async function uploadToCloudinary(file) {
+  const url = "https://api.cloudinary.com/v1_1/drjrnf6rr/image/upload";
   const formData = new FormData();
-  formData.append("name", document.getElementById("dish-name").value);
-  formData.append("category", document.getElementById("dish-category").value);
-  formData.append("price", document.getElementById("dish-price").value);
-  formData.append("description", document.getElementById("dish-description").value);
-  formData.append("image", document.getElementById("dish-img-upload").files[0]);
+  formData.append("file", file);
+  formData.append("upload_preset", "ml_default");
 
-  await fetch(`${API_URL}/api/menu`, {
+  const res = await fetch(url, {
     method: "POST",
     body: formData,
   });
 
-  document.getElementById("add-dish-form").reset();
-  loadMenu();
+  const data = await res.json();
+  return data.secure_url;
+}
+
+// ➕ Agregar plato
+document.getElementById("add-dish-form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById("dish-name").value;
+  const category = document.getElementById("dish-category").value;
+  const price = document.getElementById("dish-price").value;
+  const description = document.getElementById("dish-description").value;
+  const file = document.getElementById("dish-img-upload").files[0];
+
+  if (!file) {
+    alert("Por favor, selecciona una imagen.");
+    return;
+  }
+
+  try {
+    const imgURL = await uploadToCloudinary(file);
+
+    const data = {
+      name,
+      category,
+      price,
+      description,
+      image: imgURL // 🔥 Enviar como JSON, no FormData
+    };
+
+    await fetch(`${API_URL}/api/menu`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    document.getElementById("add-dish-form").reset();
+    loadMenu();
+  } catch (error) {
+    alert("Error al subir imagen a Cloudinary.");
+  }
 });
