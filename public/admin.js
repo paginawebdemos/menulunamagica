@@ -1,5 +1,5 @@
 // 🟢 URL de tu backend
-const API_URL = "https://lunamagica.onrender.com";
+const API_URL = "https://menulunamagica.onrender.com";
 
 // 🔐 Login seguro con backend
 document.getElementById("login-form").addEventListener("submit", async function (e) {
