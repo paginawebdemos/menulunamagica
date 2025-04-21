@@ -1,5 +1,5 @@
 // 🔁 CAMBIA ESTA URL si tu dominio en Render es diferente
-const API_URL = "https://lunamagica.onrender.com";
+const API_URL = "https://menulunamagica.onrender.com";
 
 let menuItems = [];
 const menuSection = document.getElementById("menu");
