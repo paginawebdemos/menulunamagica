@@ -1855,7 +1855,7 @@ form button:hover {
     padding: 10px;
   }
 }
-/* Estilo para el contenedor del administrador (fondo azul oscuro) */
+/* Estilo para el contenedor del administrador (fondo azul más oscuro) */
 #admin-section {
   display: flex;
   flex-direction: column;
@@ -1863,12 +1863,12 @@ form button:hover {
   align-items: center; /* Centrado horizontal */
   min-height: 100vh; /* Ocupa toda la altura */
   width: 100%; /* Asegura que ocupe todo el ancho */
-  background-color: #1a237e; /* Azul oscuro para administrador */
+  background-color: #0d1b40; /* Azul más oscuro para administrador */
 }
 
 /* Estilo para el título dentro de #login-section */
 #login-section h3 {
-  color: #1a237e; /* Azul oscuro para combinar con el tema */
+  color: #0d1b40; /* Azul más oscuro para combinar con el tema */
   font-size: 24px; /* Tamaño adecuado */
   margin-bottom: 20px; /* Espacio inferior */
   text-align: center; /* Centrado */
